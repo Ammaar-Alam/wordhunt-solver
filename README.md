@@ -6,8 +6,17 @@ A AI-powered macOS application that automatically solves GamePigeon's Word Hunt 
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.1+-orange.svg)](https://pytorch.org/)
-[![macOS](https://img.shields.io/badge/macOS-Sonoma%2014.0%2B-lightgrey.svg)](https://www.apple.com/macos/)
+[![macOS](https://img.shields.io/badge/macOS-Sonoma%2015.0%2B-lightgrey.svg)](https://www.apple.com/macos/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## Prerequisites
+
+Before installing, ensure you have:
+
+- **macOS Sonoma (15.0) or later** - Required for iPhone Mirroring feature
+- **MacBook with iPhone Mirroring app enabled**
+- **iPhone and MacBook logged into the same iCloud account** - Required for iPhone Mirroring to work
+- **Screen Recording and Accessibility permissions** - Will be set up during first launch
 
 ## Features
 
@@ -150,20 +159,42 @@ Output: 26 classes (A-Z)
 
 ## Installation
 
-### Prerequisites
+### Option 1: Download Pre-built Release (Recommended)
 
-- macOS Sonoma (15.0) or later (required for iPhone Mirroring)
-- MacBook with iPhone Mirroring app enabled
-- iPhone and MacBook logged into the same iCloud account
-- Python 3.8 or later
-- Screen Recording and Accessibility permissions
+1. **Download the latest release**
+   - Go to the [Releases](https://github.com/Ammaar-Alam/wordhunt-solver/releases) page
+   - Download `WordHuntSolver-macOS.zip` from the latest release
 
-### Quick Start
+2. **Extract and open the app**
+   - Extract the ZIP file
+   - Double-click `WordHuntSolver.app` to open it
+   - macOS will show a security warning: "WordHuntSolver cannot be opened because the developer cannot be verified"
+   - Click **Cancel**
+
+3. **Trust and open the app**
+   - Open **System Settings** → **Privacy & Security**
+   - Scroll down to find the message: "WordHuntSolver was blocked from use because it is not from an identified developer"
+   - Click **Open Anyway** next to the message
+   - Confirm by clicking **Open** in the dialog
+
+4. **Set up permissions**
+   - When the app opens, click the **"Permissions"** button in the app
+   - This will open System Settings to the relevant privacy sections
+   - Enable **Screen Recording** permission
+   - Enable **Accessibility** permission
+   - You may need to **restart the app** after granting permissions
+
+5. **You're ready to go!**
+   - Open iPhone Mirroring with Word Hunt game
+   - Click "Move to Corner" to position the window
+   - Click "Start" to begin solving
+
+### Option 2: Install from Source
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/WordHunt-Solver.git
-   cd WordHunt-Solver
+   git clone https://github.com/Ammaar-Alam/wordhunt-solver.git
+   cd wordhunt-solver
    ```
 
 2. **Install dependencies**
@@ -171,49 +202,43 @@ Output: 26 classes (A-Z)
    pip install -r requirements.txt
    ```
 
-3. **Grant permissions**
-   - System Preferences → Security & Privacy → Privacy
-   - Enable Screen Recording
-   - Enable Accessibility
-
-4. **Run the application**
+3. **Run the application**
    ```bash
    python app_cocoa.py
    ```
 
-### Building a Standalone App
-
-To create a distributable macOS application:
-
-```bash
-make build-app-cocoa-pyi
-```
-
-This creates `dist/WordHuntSolver.app` that can be distributed without requiring Python installation.
+4. **Set up permissions**
+   - Click the **"Permissions"** button in the app
+   - Enable Screen Recording and Accessibility permissions
+   - Restart the app if needed
 
 ## Usage
 
 ### GUI Mode (Recommended)
 
 1. **Launch the app**
-   ```bash
-   python app_cocoa.py
-   ```
+   - If installed from release: Open `WordHuntSolver.app`
+   - If installed from source: Run `python app_cocoa.py`
 
-2. **Setup**
-   - Click "Permissions" to open System Preferences
-   - Grant Screen Recording and Accessibility permissions
-   - Open iPhone Mirroring with Word Hunt game
-   - Click "Move to Corner" to position the window
+2. **Initial setup**
+   - Click **"Permissions"** button to open System Settings
+   - Grant **Screen Recording** permission
+   - Grant **Accessibility** permission
+   - **Restart the app** if permissions were just granted
 
-3. **Calibration** (Optional, recommended for first use)
-   - Click "Calibrate"
+3. **Prepare iPhone Mirroring**
+   - Open iPhone Mirroring on your MacBook
+   - Open Word Hunt game on your iPhone
+   - Click **"Move to Corner"** in the app to position the iPhone Mirroring window
+
+4. **Calibration** (Optional, recommended for first use)
+   - Click **"Calibrate"**
    - Hover over center of top-left tile, wait for countdown
    - Hover over center of bottom-right tile, wait for countdown
    - Calibration is saved for future runs
 
-4. **Solve**
-   - Click "Start" to begin solving
+5. **Solve**
+   - Click **"Start"** to begin solving
    - Watch the dashboard for progress
    - Words are swiped automatically in optimal order
 
