@@ -187,7 +187,8 @@ Output: 26 classes (A-Z)
 5. **You're ready to go!**
    - Open iPhone Mirroring with Word Hunt game
    - Click "Move to Corner" to position the window
-   - Click "Start" to begin solving
+   - Send the Word Hunt text, and open it to the Start screen
+   - Click "Start" on the app to begin solving
 
 ### Option 2: Install from Source
 
