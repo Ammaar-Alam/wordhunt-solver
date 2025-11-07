@@ -239,9 +239,12 @@ Output: 26 classes (A-Z)
    - Calibration is saved for future runs
 
 5. **Solve**
+   - Send the Word Hunt text, and open it to the Start screen
    - Click **"Start"** to begin solving
+   - **Important**: Once solving starts, the app takes control of your mouse. You will not be able to move your mouse manually while the solver is running.
    - Watch the dashboard for progress
    - Words are swiped automatically in optimal order
+   - **To stop immediately**: Press **Escape** (Esc) key at any time during solving to stop the solver and regain mouse control
 
 ### Command Line Mode
 
@@ -258,6 +261,15 @@ python wordhunt.py dry-run
 # Calibration only
 python wordhunt.py calibrate
 ```
+
+### Important Usage Notes
+
+- **Mouse Control**: When solving starts, the app takes full control of your mouse. You cannot move your mouse manually while the solver is active.
+- **Stopping the Solver**: Press **Escape** (Esc) key at any time to immediately stop solving and regain mouse control. You can also click the "Stop" button in the app.
+- **Keyboard Shortcuts**:
+  - `⌘S` - Start solving
+  - `⌘.` - Stop solving
+  - `Esc` - Stop solving (works globally, even when app is not focused)
 
 ### Testing Without iPhone Mirroring
 
